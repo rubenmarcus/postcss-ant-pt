@@ -26,7 +26,7 @@
   </a>
 </p>
 
-# Table of Contents
+# Tabela de Conteúdos
 
 <!-- toc -->
 
