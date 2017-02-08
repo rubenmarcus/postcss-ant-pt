@@ -1,7 +1,7 @@
 <h3 align="center">postcss-ant</h3>
 
 <p align="center">
-  <sup>Layouts made fun.</sup>
+  <sup>Layouts mais divertidos.</sup>
 </p>
 
 <p align="center">
