@@ -31,8 +31,8 @@
 <!-- toc -->
 
 - [Play with postcss-ant Right Now](#play-with-postcss-ant-right-now)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Instlaando](#installation)
+- [Uso](#usage)
   * [postcss-cli and CSS](#postcss-cli-and-css)
   * [postcss-cli and Sass](#postcss-cli-and-sass)
   * [postcss-cli and Stylus](#postcss-cli-and-stylus)
@@ -40,15 +40,15 @@
   * [Another grid?!](#another-grid)
   * [But Flexbox?!](#but-flexbox)
   * [What About Grid Spec?!](#what-about-grid-spec)
-- [Global Settings](#global-settings)
+- [Configurações Globais](#global-settings)
   * [@ant-namespace](#ant-namespace)
   * [@ant-gutters](#ant-gutters)
   * [@ant-support](#ant-support)
   * [@ant-technique](#ant-technique)
   * [@ant-children](#ant-children)
   * [@ant-rounders](#ant-rounders)
-- [Local Settings](#local-settings)
-- [Local API](#local-api)
+- [Configurações Locais](#local-settings)
+- [API Local](#local-api)
   * [`sizes()` and `pluck()`](#sizes-and-pluck)
   * [Order of Operations](#order-of-operations)
   * [`generate-grid` (or `gg`)](#generate-grid-or-gg)
@@ -60,7 +60,7 @@
 - [Helpers](#helpers)
 - [Browser Support](#browser-support)
 - [Wishlist](#wishlist)
-- [Thanks](#thanks)
+- [Agradeci](#thanks)
 - [Contributing](#contributing)
 
 <!-- tocstop -->
