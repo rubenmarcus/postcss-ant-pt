@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <sup>Traduçção para Português feita por <a href="https://github.com/rubenmarcus">Ruben Marcus</a> do Plugin de PostCSS de <a href="https://github.com/corysimmons/postcss-ant">Cory Simmons </a>.</sup>
+  <sup>Tradução para Português feita por <a href="https://github.com/rubenmarcus">Ruben Marcus</a> do Plugin de PostCSS de <a href="https://github.com/corysimmons/postcss-ant">Cory Simmons </a>.</sup>
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@
 
 <!-- toc -->
 
-- [Play with postcss-ant Right Now](#play-with-postcss-ant-right-now)
+- [Brinque agora com postcss-ant](#play-with-postcss-ant-right-now)
 - [Instalando](#installation)
 - [Uso](#usage)
   * [postcss-cli e CSS](#postcss-cli-and-css)
