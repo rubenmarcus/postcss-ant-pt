@@ -5,6 +5,10 @@
 </p>
 
 <p align="center">
+  <sup>Traduçção para Português feita por <a href="https://github.com/rubenmarcus">Ruben Marcus</a> do Plugin de PostCSS de <a href="https://github.com/corysimmons/postcss-ant">Cory Simmons </a>.</sup>
+</p>
+
+<p align="center">
   <img src=".github/img/postcss-ant-logo.png" alt="Cartoon ant with red cape." width="320">
 </p>
 
@@ -31,15 +35,15 @@
 <!-- toc -->
 
 - [Play with postcss-ant Right Now](#play-with-postcss-ant-right-now)
-- [Instlaando](#installation)
+- [Instalando](#installation)
 - [Uso](#usage)
-  * [postcss-cli and CSS](#postcss-cli-and-css)
-  * [postcss-cli and Sass](#postcss-cli-and-sass)
-  * [postcss-cli and Stylus](#postcss-cli-and-stylus)
+  * [postcss-cli e CSS](#postcss-cli-and-css)
+  * [postcss-cli e Sass](#postcss-cli-and-sass)
+  * [postcss-cli e Stylus](#postcss-cli-and-stylus)
 - [FAQ](#faq)
-  * [Another grid?!](#another-grid)
-  * [But Flexbox?!](#but-flexbox)
-  * [What About Grid Spec?!](#what-about-grid-spec)
+  * [Outro grid?!](#another-grid)
+  * [Mas Flexbox?!](#but-flexbox)
+  * [Sobre a Grid Spec?!](#what-about-grid-spec)
 - [Configurações Globais](#global-settings)
   * [@ant-namespace](#ant-namespace)
   * [@ant-gutters](#ant-gutters)
@@ -49,25 +53,25 @@
   * [@ant-rounders](#ant-rounders)
 - [Configurações Locais](#local-settings)
 - [API Local](#local-api)
-  * [`sizes()` and `pluck()`](#sizes-and-pluck)
-  * [Order of Operations](#order-of-operations)
-  * [`generate-grid` (or `gg`)](#generate-grid-or-gg)
+  * [`sizes()` e `pluck()`](#sizes-and-pluck)
+  * [Ordem das Operações](#order-of-operations)
+  * [`generate-grid` (ou `gg`)](#generate-grid-or-gg)
   * [`ratio()`](#ratio)
   * [`bump()`](#bump)
 - [Bespoking Grids](#bespoking-grids)
   * [Pre-processor Looping to Create Ratio Grid Classes](#pre-processor-looping-to-create-ratio-grid-classes)
-  * [Create Your Own Attribute-driven Grid](#create-your-own-attribute-driven-grid)
+  * [Crie sua própria grid orientada a Atributos](#create-your-own-attribute-driven-grid)
 - [Helpers](#helpers)
-- [Browser Support](#browser-support)
+- [Suporte de Browsers](#browser-support)
 - [Wishlist](#wishlist)
-- [Agradeci](#thanks)
-- [Contributing](#contributing)
+- [Agradecimentos](#thanks)
+- [Contribuindo](#contributing)
 
 <!-- tocstop -->
 
 ---
 
-<h2 align="center">Author's Note</h2>
+<h2 align="center">Nota do Autor</h2>
 
 I know a thing or two about grid systems and layouts in CSS. I made [Jeet](http://jeet.gs) and [Lost](http://lostgrid.org). They each took about a week to make.
 
@@ -89,29 +93,29 @@ Or don't. I'm not your mom. 🐒
 
 ---
 
-## Play with postcss-ant Right Now
+## Comece a usar postcss-ant agora
 
-- Clone this repo
-- `npm install node-sass` (Sass isn't included with the playground as it'd make the `npm install` for postcss-ant take forever)
+- Clone esse repositório
+- `npm install node-sass` (Sass, não está instalado no playground, pois faria o npm install para postcss-ant levar muito tempo)
 - `npm install`
 - `npm run playground`
-- Edit `playground/index.html` and `playground/css/style.scss`
+- Edite `playground/index.html` e `playground/css/style.scss`
 
-[Back to top ↑](#table-of-contents)
+[Voltar para o Topo ↑](#table-of-contents)
 
-## Installation
+## Instalação:
 
 `npm install postcss-ant`
 
-[Back to top ↑](#table-of-contents)
+[Voltar para o Topo ↑](#table-of-contents)
 
-## Usage
+## Uso
 
-You can use postcss-ant anywhere you can use PostCSS: CLI, Webpack, Gulp, Rollup, Grunt, etc.
+Você pode usar o postcss-ant em qualquer lugar que você usar PostCSS: CLI, Webpack, Gulp, Rollup, Grunt,etc.
 
-I 💖 CLI so below are instructions for CLI. Just ping me via Issues if you'd like a boilerplate integration with a specific tool -- we can start a Wiki page for them.
+Eu 💖 CLI ,abaixo estão a instruções para CLI.De um ping nas Issues, ou se você qusier um boilerplate para uma tool especifíca.Podemos iniciar um wiki para elas.
 
-### postcss-cli and CSS
+### postcss-cli e CSS
 
 - `npm install postcss-cli`
 - `node_modules/.bin/postcss -w -u postcss-ant -o style.post.css style.css`
@@ -135,11 +139,11 @@ section {
 
 ### postcss-cli and Sass
 
-Docs are in Sass because Sass is more popular.
+Documentação está em Sass, porquê o Sass é mais popular.
 
 - `npm install postcss-cli node-sass`
 - `node_modules/.bin/node-sass -w style.scss style.css`
-- `node_modules/.bin/postcss -w -u postcss-ant -o style.post.css style.css` (in another terminal tab)
+- `node_modules/.bin/postcss -w -u postcss-ant -o style.post.css style.css` (em outra tab do terminal)
 
 ### postcss-cli and Stylus
 
@@ -207,7 +211,7 @@ section {
 
 If you can wrap your head around `generate-grid: columns()` then that's all you really need to get rolling with postcss-ant.
 
-### But Flexbox?!
+### Mas Flexbox?!
 
 Flexbox is a bad grid replacement since `flex-grow` doesn't take gutters into account when spanning multiple columns -- unless you're making those padding-based grids that require a significant amount of markup bloat. Even then, it would crap-the-bed if the last element was that `auto` (or `flex-grow: 1` in a flexbox approach). It'd stretch the rest of the row (not what you wanted).
 
@@ -251,7 +255,7 @@ Accurate information > whatever bias might be blinding me.
 
 > **Fun Fact:** Grid Spec's API was developed independently of postcss-ant's. Any similarities with how size setting works (e.g. fixed takes precedence over `fr`) is completely by coincidence and a testament to how good of an idea these new ideas about sizing are.
 
-[Back to top ↑](#table-of-contents)
+[Voltar para o Topo ↑](#table-of-contents)
 
 ## Global Settings
 
@@ -723,7 +727,7 @@ These are only the sizes, you'd need to add a few custom grid classes like so:
 
 ![](.github/img/ratio-grid-classes.png)
 
-### Create Your Own Attribute-driven Grid
+### Crie sua própria grid orientada a Atributos
 
 Combining `sizes()` and `pluck()` with looping opens up a world of interesting approaches. Let's create a grid that is driven by very readable attributes:
 
@@ -848,7 +852,7 @@ Anywhere [`calc`](http://caniuse.com/#feat=calc) is supported. IE9+ without any 
 
 IE8+ and Android 4.0.3+ with polyfills (like [ielove](https://github.com/corysimmons/ielove)).
 
-[Back to top ↑](#table-of-contents)
+[Voltar para o Topo ↑](#table-of-contents)
 
 ## Wishlist
 
@@ -857,7 +861,7 @@ postcss-ant's API was developed to be extensible. I have some ideas for features
 - `random()` - On save, generates a random mosaic grid out of a collection of user-defined sizes.
 - Built-in `postcss-calc` and provide a global/local setting to activate it with rounding precision.
 
-[Back to top ↑](#table-of-contents)
+[Voltar para o Topo ↑](#table-of-contents)
 
 ## Thanks
 
@@ -865,9 +869,9 @@ To everyone who has taken interest in my work over the years, and all the chatro
 
 As always, thank you to Maria Keller for her excellent logo design. Hire this amazing illustrator/videographer!
 
-[Back to top ↑](#table-of-contents)
+[Voltar para o Topo ↑](#table-of-contents)
 
-## Contributing
+## Contribuição
 
 - Ping me via Issues or Gitter before you undertake any large changes so we can get on the same page. It's unlikely I'll merge a huge code change unless I'm along for the ride early on.
 - `fork, clone, npm i, npm start`
@@ -875,4 +879,4 @@ As always, thank you to Maria Keller for her excellent logo design. Hire this am
 - Append test features in `test/index.js`. When you're content with how something looks, copy its `style.posted.css` to `locked.css`. Tests should pass.
 - PR with details on what you changed. New features require new tests.
 
-[Back to top ↑](#table-of-contents)
+[Voltar para o Topo ↑](#table-of-contents)
